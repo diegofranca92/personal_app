@@ -14,6 +14,7 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: AppBar(
         title: Text("Meu Perfil"),
       ),
+      // body: ProfileCard(),
     );
   }
 }
