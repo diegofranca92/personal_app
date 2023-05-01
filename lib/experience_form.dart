@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:personal_app/components/modal_add_skills.dart';
 
 class ExperienceForm extends StatefulWidget {
   const ExperienceForm({super.key});
@@ -14,7 +16,7 @@ class _ExperienceFormState extends State<ExperienceForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Nova Experiência'),
+        title: const Text('Nova Experiência'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(0.8),
@@ -24,7 +26,7 @@ class _ExperienceFormState extends State<ExperienceForm> {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Cargo'),
+                    decoration: const InputDecoration(labelText: 'Cargo'),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Campo obrigatório';
@@ -32,7 +34,7 @@ class _ExperienceFormState extends State<ExperienceForm> {
                     },
                   ),
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Empresa'),
+                    decoration: const InputDecoration(labelText: 'Empresa'),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Campo obrigatório';
@@ -40,7 +42,7 @@ class _ExperienceFormState extends State<ExperienceForm> {
                     },
                   ),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Descrição',
                     ),
                     maxLines: null,
@@ -55,10 +57,15 @@ class _ExperienceFormState extends State<ExperienceForm> {
                     },
                   ),
                   ElevatedButton(
+                      onPressed: () => showBarModalBottomSheet(
+                          context: context,
+                          builder: (context) => const ModalAddSkills()),
+                      child: const Text('Add Skills')),
+                  ElevatedButton(
                       onPressed: () {
                         formKey.currentState?.validate();
                       },
-                      child: Text('Salvar'))
+                      child: const Text('Salvar'))
                 ],
               )),
         ),
