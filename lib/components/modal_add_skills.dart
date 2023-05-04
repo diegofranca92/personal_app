@@ -28,8 +28,9 @@ class _ModalAddSkillsState extends State<ModalAddSkills> {
                     ///*****A cada tempo que eu adicionar em cadas experiencia ela vai se somando pra adicionar no Perfil principal/*****
                   ),
                   TextFormField(
-                    decoration:
-                        const InputDecoration(labelText: 'Nome da Skill'),
+                    decoration: const InputDecoration(
+                        labelText: 'Nome da Skill',
+                        border: OutlineInputBorder()),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Campo obrigatório';

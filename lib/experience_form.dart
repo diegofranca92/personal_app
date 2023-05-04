@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:personal_app/components/modal_add_skills.dart';
+import 'package:personal_app/model/experience_model.dart';
 
 class ExperienceForm extends StatefulWidget {
-  const ExperienceForm({super.key});
+  ExperienceModel? experience;
+
+  ExperienceForm({Key? key, this.experience}) : super(key: key);
 
   @override
   State<ExperienceForm> createState() => _ExperienceFormState();
@@ -26,7 +29,10 @@ class _ExperienceFormState extends State<ExperienceForm> {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: const InputDecoration(labelText: 'Cargo'),
+                    decoration: const InputDecoration(
+                        labelText: 'Cargo',
+                        border: OutlineInputBorder(),
+                        prefixIcon: Icon(Icons.person_pin_outlined)),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Campo obrigatório';
@@ -34,7 +40,8 @@ class _ExperienceFormState extends State<ExperienceForm> {
                     },
                   ),
                   TextFormField(
-                    decoration: const InputDecoration(labelText: 'Empresa'),
+                    decoration: const InputDecoration(
+                        labelText: 'Empresa', border: OutlineInputBorder()),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Campo obrigatório';

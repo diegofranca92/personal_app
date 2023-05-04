@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:personal_app/experience_form.dart';
+import 'package:personal_app/model/experience_model.dart';
 import 'package:personal_app/repository/experience_repository.dart';
 
 class ExperiencesPage extends StatefulWidget {
@@ -35,6 +36,13 @@ class _ExperiencesPageState extends State<ExperiencesPage>
     experiencesRepo = ExperienceRepository();
   }
 
+  showExperienceDetails(ExperienceModel experience) {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (_) => ExperienceForm(experience: experience)));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,10 +52,8 @@ class _ExperiencesPageState extends State<ExperiencesPage>
         scale: _animation,
         child: FloatingActionButton.extended(
           onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ExperienceForm()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ExperienceForm()));
           },
           icon: const Icon(Icons.add),
           label: const Text('Nova experiência'),
@@ -88,11 +94,13 @@ class _ExperiencesPageState extends State<ExperiencesPage>
                         itemBuilder: (context, index) => ListTile(
                           leading: CircleAvatar(
                               child: ClipRRect(
+                            borderRadius: BorderRadius.circular(50),
                             child:
                                 Image.network(experiences[index].description),
-                            borderRadius: BorderRadius.circular(50),
                           )),
                           title: Text(experiences[index].position),
+                          onTap: () =>
+                              showExperienceDetails(experiences[index]),
                         ),
                         separatorBuilder: (_, __) => const Divider(),
                       ),
