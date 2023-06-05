@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:personal_app/components/modal_add_skills.dart';
+import 'package:personal_app/widgets/modal_add_skills.dart';
 import 'package:personal_app/model/experience_model.dart';
 
 class ExperienceForm extends StatefulWidget {

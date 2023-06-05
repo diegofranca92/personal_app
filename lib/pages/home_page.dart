@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:personal_app/experiences_page.dart';
-import 'package:personal_app/profile_page.dart';
+import 'package:personal_app/pages/experiences_page.dart';
+import 'package:personal_app/pages/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:personal_app/experience_form.dart';
+import 'package:personal_app/widgets/experience_form.dart';
 import 'package:personal_app/model/experience_model.dart';
 import 'package:personal_app/repository/experience_repository.dart';
 
