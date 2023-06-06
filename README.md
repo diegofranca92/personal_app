@@ -1,16 +1,26 @@
-# personal_app
+1- Listar as experiencias
+2- Ao clicar em cada uma vai pra o formulario pra edição
+3- Modal de skill precisa mandar os dados pra o formulario principal
+4- Modal de skill provavelmente já irá listar skills ja cadastradas
+5- Caso não possua. Ter a opção de adicionar
 
-A new Flutter project.
+### MVP
+- [ ] capturar todas as informações para cadastro
+- [ ] modal de confirmação nas operações de CRUD
+- [ ] Salvar dados localmente pra não fazer requisições desnecessarias a API
+- [x] Home com minha foto e a Bio e cargo atual(configurar de acordo com a Data da última experiência)
+- [x] Splash screen
+- [x] Auth só com meu usuario
+- [ ] Publicação na Loja
+- [ ] Atualização na Loja
 
-## Getting Started
+### Reqs
+- RealmDB ou ObjectBox junto com API GraphQL
+- Back4app ou Parse pra Hospedagem
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### V2
+- [ ] Modal de Edição do Perfil
+- [ ] Upload de foto de Perfil
+- [ ] Exportação em PDF de todo o curriculo
+- [ ] Internalização dos Dados ao exportar
+- [ ] Splash screen com Lotie
