@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "423726466777",
+    "project_id": "site-portfolio-9eebe",
+    "storage_bucket": "site-portfolio-9eebe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423726466777:android:c6ff9f6635b44b3c1be0c8",
+        "android_client_info": {
+          "package_name": "com.example.bitbank_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423726466777-gsgfhf8u45ec6c1klj9io433ie5ff34m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCTMlnJBGvr2Xq5u-SfwnCCIC1HGjbx5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423726466777-872r5cs7011vr1af91loj73d2esdpg8s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "423726466777-c5b4c1db4vje3rgbij56crmb9p9mshn1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bitbankApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423726466777:android:b6a407950c3f9d8a1be0c8",
+        "android_client_info": {
+          "package_name": "com.example.mais_capoeira"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423726466777-gsgfhf8u45ec6c1klj9io433ie5ff34m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCTMlnJBGvr2Xq5u-SfwnCCIC1HGjbx5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423726466777-872r5cs7011vr1af91loj73d2esdpg8s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "423726466777-c5b4c1db4vje3rgbij56crmb9p9mshn1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bitbankApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423726466777:android:74f1b9ef7dde69361be0c8",
+        "android_client_info": {
+          "package_name": "com.example.personal_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423726466777-gsgfhf8u45ec6c1klj9io433ie5ff34m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCTMlnJBGvr2Xq5u-SfwnCCIC1HGjbx5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423726466777-872r5cs7011vr1af91loj73d2esdpg8s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "423726466777-c5b4c1db4vje3rgbij56crmb9p9mshn1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bitbankApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

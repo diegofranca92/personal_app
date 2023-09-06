@@ -24,3 +24,8 @@
 - [ ] Exportação em PDF de todo o curriculo
 - [ ] Internalização dos Dados ao exportar
 - [ ] Splash screen com Lotie
+
+
+<!-- Configurar Firebase
+https://firebase.google.com/docs/flutter/setup?hl=pt-br&platform=android
+ -->
