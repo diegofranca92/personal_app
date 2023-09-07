@@ -22,7 +22,7 @@ class _ExperienceFormState extends State<ExperienceForm> {
         title: const Text('Nova Experiência'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(0.8),
+        padding: const EdgeInsets.all(24),
         child: Center(
           child: Form(
               key: formKey,
@@ -39,29 +39,36 @@ class _ExperienceFormState extends State<ExperienceForm> {
                       }
                     },
                   ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        labelText: 'Empresa', border: OutlineInputBorder()),
-                    validator: (String? value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                    },
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Descrição',
+                  Padding(
+                    padding: const EdgeInsets.only(top: 24),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                          labelText: 'Empresa', border: OutlineInputBorder()),
+                      validator: (String? value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Campo obrigatório';
+                        }
+                      },
                     ),
-                    maxLines: null,
-                    minLines: 2,
-                    maxLength: 200,
-                    textCapitalization: TextCapitalization.sentences,
-                    keyboardType: TextInputType.multiline,
-                    validator: (String? value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                    },
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 24),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Descrição',
+                      ),
+                      maxLines: null,
+                      minLines: 2,
+                      maxLength: 200,
+                      textCapitalization: TextCapitalization.sentences,
+                      keyboardType: TextInputType.multiline,
+                      validator: (String? value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Campo obrigatório';
+                        }
+                      },
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () => showBarModalBottomSheet(

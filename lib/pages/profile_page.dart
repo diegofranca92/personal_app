@@ -25,7 +25,25 @@ class _ProfilePageState extends State<ProfilePage> {
               icon: const Icon(Icons.logout))
         ],
       ),
-      // body: ProfileCard(),
+      body: Column(
+        children: [
+          CircleAvatar(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Image.network(
+                  'https://media.licdn.com/dms/image/C4D03AQGVg366iwWCqA/profile-displayphoto-shrink_800_800/0/1607252011195?e=1699488000&v=beta&t=TZQ0oP6FBAbUHR76uuQGvdxIWM1jPKwwTaYm4OfHzN4'),
+            ),
+          ),
+          const SizedBox(
+              child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Text(
+                style: TextStyle(fontFamily: 'ubuntu'),
+                'onsectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididuntloremimpsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor incididunt'),
+          )),
+          ElevatedButton(onPressed: () {}, child: const Text('Editar'))
+        ],
+      ),
     );
   }
 }
