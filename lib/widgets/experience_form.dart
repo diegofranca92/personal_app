@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:personal_app/widgets/modal_add_projects.dart';
 import 'package:personal_app/widgets/modal_add_skills.dart';
 import 'package:personal_app/model/experience_model.dart';
 
@@ -75,6 +76,11 @@ class _ExperienceFormState extends State<ExperienceForm> {
                           context: context,
                           builder: (context) => const ModalAddSkills()),
                       child: const Text('Add Skills')),
+                  ElevatedButton(
+                      onPressed: () => showBarModalBottomSheet(
+                          context: context,
+                          builder: (context) => const ModalAddProjects()),
+                      child: const Text('Add Projects')),
                   ElevatedButton(
                       onPressed: () {
                         formKey.currentState?.validate();

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ModalAddSkills extends StatefulWidget {
-  const ModalAddSkills({super.key});
+class ModalAddProjects extends StatefulWidget {
+  const ModalAddProjects({super.key});
 
   @override
-  State<ModalAddSkills> createState() => _ModalAddSkillsState();
+  State<ModalAddProjects> createState() => _ModalAddProjectsState();
 }
 
-class _ModalAddSkillsState extends State<ModalAddSkills> {
+class _ModalAddProjectsState extends State<ModalAddProjects> {
   final formKey = GlobalKey<FormState>();
-  double skillTime = 2;
+  double projectTime = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -23,17 +23,14 @@ class _ModalAddSkillsState extends State<ModalAddSkills> {
               child: Column(
                 children: [
                   const Text(
-                    'Adicionar Skills',
+                    'Adicionar Projetos',
                     style: TextStyle(fontSize: 20),
-                    // TODO ***** */ Aqui pode só listar as Skills que eu ja tenho no geral e eu só selecionar elas./*****
-                    ///*****A cada tempo que eu adicionar em cadas experiencia ela vai se somando pra adicionar no Perfil principal/*****
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 24, top: 24),
                     child: TextFormField(
                       decoration: const InputDecoration(
-                          labelText: 'Nome da Skill',
-                          border: OutlineInputBorder()),
+                          labelText: 'Nome', border: OutlineInputBorder()),
                       validator: (String? value) {
                         if (value == null || value.isEmpty) {
                           return 'Campo obrigatório';
@@ -41,15 +38,35 @@ class _ModalAddSkillsState extends State<ModalAddSkills> {
                       },
                     ),
                   ),
-                  const Text('Tempo de experiência'),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 24),
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Descrição',
+                      ),
+                      maxLines: null,
+                      minLines: 2,
+                      maxLength: 200,
+                      textCapitalization: TextCapitalization.sentences,
+                      keyboardType: TextInputType.multiline,
+                      validator: (String? value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Campo obrigatório';
+                        }
+                      },
+                    ),
+                  ),
+                  const Text('Tempo de duração'),
                   // Caso for fazer a versão mais avançada - https://www.youtube.com/watch?v=vuw818gAlF8
                   Slider(
-                      value: skillTime,
+                      value: projectTime,
                       min: 1,
                       max: 10,
                       divisions: 10,
-                      label: skillTime.round().toString(),
-                      onChanged: (value) => setState(() => skillTime = value)),
+                      label: projectTime.round().toString(),
+                      onChanged: (value) =>
+                          setState(() => projectTime = value)),
                   ElevatedButton(
                       onPressed: () {
                         formKey.currentState?.validate();

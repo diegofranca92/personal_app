@@ -20,7 +20,8 @@ class BlockButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      color: Colors.black54,
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
           onPressed: onPressed,
@@ -30,10 +31,10 @@ class BlockButton extends StatelessWidget {
                 ? [
                     Icon(icon),
                     Padding(
-                      padding: EdgeInsets.all(16),
+                      padding: const EdgeInsets.all(16),
                       child: Text(
                         label,
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                       ),
                     )
                   ]

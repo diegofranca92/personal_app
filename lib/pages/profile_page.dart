@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_app/services/auth_service.dart';
+import 'package:personal_app/widgets/experience_card.dart';
 import 'package:provider/provider.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -27,6 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       body: Column(
         children: [
+          const ExperienceCard(),
           CircleAvatar(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(50),
